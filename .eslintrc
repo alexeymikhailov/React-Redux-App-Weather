@@ -1,0 +1,73 @@
+{
+	"parser": "babel-eslint",
+	"plugins": [
+		"react"
+	],
+	"env": {
+		"browser": true,
+		"node": true,
+		"es6": true
+	},
+	"parserOptions": {
+		"ecmaVersion": 6,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"arrowFunctions": true,
+			"blockBindigs": true,
+			"classes": true,
+			"defaultParam": true,
+			"destructuring": true,
+			"modules": true,
+			"objectLiteralShorthandMethods": true,
+			"objectLiteralShorthandProperties": true,
+			"jsx": true,
+			"restParams": true,	
+			"spread": true,
+			"superInFunctions": true,
+			"templateStrings": true
+		}
+	},
+	"rules": {
+		"strict": [2, "global"],
+		"camelcase": [2, {"properties": "always"}],
+		"arrow-body-style": [1, "always"],
+		"arrow-parens": [1, "always"],
+		"arrow-spacing": 2,
+		"constructor-super": 2,
+		"no-var": 2,
+		"semi": [2, "always"],
+		"react/jsx-boolean-value": 1,
+		"react/jsx-no-undef": 2,
+		"react/jsx-pascal-case": 1,
+		"react/jsx-uses-react": 1,
+		"react/jsx-uses-vars": 2,
+		"react/jsx-sort-props": 0,
+		"react/jsx-indent-props": 0,
+		"react/jsx-curly-spacing": 1,
+		"react/jsx-key": 1,
+		"react/jsx-max-props-per-line": [1, {"maximum": 2}],
+		"react/jsx-closing-bracket-location": 0,
+		"react/jsx-no-bind": [1, {
+			"allowArrowFunctions": true,
+			"allowBind": false
+		}],
+		"react/jsx-no-duplicate-props": 1,
+		"react/jsx-no-literals": 0,
+		"react/prefer-es6-class": 1,
+		"react/no-danger": 1,
+		"react/no-did-mount-set-state": 1,
+		"react/no-did-update-set-state": 1,
+		"react/no-multi-comp": 1,
+		"react/no-unknown-property": 1,
+		"react/no-deprecated": 1,
+		"react/no-is-mounted": 2,
+		"react/no-set-state": 0,
+		"react/find-dom-node": 0,
+		"react/prop-types": 0,
+		"react/self-closing-comp": 1,
+		"react/sort-comp": 1,
+		"react/react-in-jsx-scope": 1,
+		"react/jsx-wrap-multilines": 2,
+		"react/require-render-return": 2
+	}
+}
