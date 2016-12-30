@@ -1,6 +1,6 @@
 #React-Redux Weather Application
 
-![Weather forecast using Geolocation and Open Weather API](https://github.com/alexeymikhailov/React-Redux-App-Weather/src/img/screenshots/weather.jpg)
+![Weather forecast using Geolocation and Open Weather API](https://github.com/alexeymikhailov/React-Redux-App-Weather/blob/master/src/img/screenshots/weather.jpg)
 
 ##Contains
 
