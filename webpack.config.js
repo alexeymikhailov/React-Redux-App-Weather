@@ -30,15 +30,14 @@ const config={
     },
   
     module: {
-        preLoaders: [
+        loaders: [ 
             {
                 test: /\.jsx?$/,
                 loader: 'eslint-loader',
+                enforce: 'pre',
                 exclude: /node_modules/
-            }
-        ],
+            },
 
-        loaders: [ 
             {
                 test: /\.jsx?$/,
                 loader: 'babel',
@@ -107,12 +106,15 @@ const config={
                 removeScriptTypeAttributes: true,
                 removeStyleLinkTypeAttributes: true
             }
+        }),
+        new webpack.LoaderOptionsPlugin({
+            options: {
+                eslint: {
+                    configFile: './.eslintrc'
+                } 
+            }
         })
-    ],
-
-    eslint: {
-        configFile: './.eslintrc'
-    }
+    ]
 };
 
 if (isProduction) {
