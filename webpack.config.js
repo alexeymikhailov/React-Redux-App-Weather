@@ -78,7 +78,7 @@ const config={
             path.resolve(__dirname, 'src'), 
             'node_modules'
         ],
-        extensions: ['', '.js', '.jsx', '.css', '.json']
+        extensions: ['.js', '.jsx', '.css', '.json']
     },
 
     plugins: [
@@ -148,4 +148,3 @@ if (isProduction) {
 }
 
 module.exports=config;
-
