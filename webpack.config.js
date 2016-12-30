@@ -30,7 +30,7 @@ const config={
     },
   
     module: {
-        loaders: [ 
+        rules: [ 
             {
                 test: /\.jsx?$/,
                 loader: 'eslint-loader',
@@ -40,7 +40,7 @@ const config={
 
             {
                 test: /\.jsx?$/,
-                loader: 'babel',
+                loader: 'babel-loader',
                 exclude: /node_modules/
             },
 
@@ -55,18 +55,18 @@ const config={
 
             {
                 test: /\.(jpe?g|png)$/i,
-                loaders: 'url?name=[name].[hash].[ext]&limit=8192',
+                loaders: 'url-loader?name=[name].[hash].[ext]&limit=8192',
                 exclude: /node_modules/
             },
 
             { 
                 test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
-                loader: "url?limit=10000&mimetype=application/font-woff",
+                loader: "url-loader?limit=10000&mimetype=application/font-woff",
                 exclude: /node_modules/
             },
 
             {   test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
-                loader: "url",
+                loader: "url-loader",
                 exclude: /node_modules/ 
             }
         ]
@@ -114,7 +114,11 @@ const config={
                 } 
             }
         })
-    ]
+    ],
+
+    performance: {
+        hints: process.env.NODE_ENV === 'production' ? "warning" : false
+    }
 };
 
 if (isProduction) {
