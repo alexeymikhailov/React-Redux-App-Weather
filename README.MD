@@ -27,3 +27,7 @@ Go to http://localhost:3000/ <br /> In case of changes, a page automatically upd
 $ npm run build
 ```
 This is the command for a build folder with production-ready files.
+
+## License
+
+MIT License
